@@ -41,10 +41,15 @@ namespace IMM.Core.API
             {
                 using (_currentTenant.Change(tenant?.Id, tenant?.Name))
                 {
+                    await next(context);
                 }
             }
+            else
+            {
+                await next(context);
+            }
 
-            await next(context);
+            
         }
     }
 }

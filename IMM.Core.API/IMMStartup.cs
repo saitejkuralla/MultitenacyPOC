@@ -1,7 +1,12 @@
-﻿using IMM.MultiTenancy;
+﻿using IMM.Core.API.JWT;
+using IMM.Core.API.Repository;
+using IMM.MultiTenancy;
 using IMM.MultiTenancy.ConfigurationStore;
 using IMM.MultiTenancy.Security;
 using IMM.MultiTenancy.TenantResolveContributers;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 namespace IMM.Core.API
 {
@@ -17,7 +22,7 @@ namespace IMM.Core.API
             services.AddControllers();
 
             services.AddTransient<ITenantConfigurationProvider, TenantConfigurationProvider>();
-            services.AddTransient<ITenantResolver,TenantResolver>();
+            services.AddTransient<ITenantResolver, TenantResolver>();
             services.AddTransient<ITenantStore, DefaultTenantStore>();
             services.AddTransient<ITenantResolveResultAccessor, HttpContextTenantResolveResultAccessor>();
 
@@ -27,6 +32,10 @@ namespace IMM.Core.API
             services.AddSingleton<ICurrentTenantAccessor>(AsyncLocalCurrentTenantAccessor.Instance);  //check this in aBP
 
             services.AddTransient<MultiTenancyMiddleware>();
+
+            //JWT TEMP
+            services.AddTransient<IUserRepository, UserRepository>();
+            services.AddTransient<ITokenService, TokenService>();
 
             //TODO : load from DB or JSONFILE
             services.Configure<AbpDefaultTenantStoreOptions>(options =>
@@ -38,6 +47,29 @@ namespace IMM.Core.API
 
                 };
             });
+
+
+            // TO DO Authentication later this will be moved to separate component
+            services.AddAuthentication(auth =>
+            {
+                auth.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                //auth.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            })
+                .AddJwtBearer(options =>
+                {
+                    options.TokenValidationParameters = new TokenValidationParameters
+                    {
+                        ValidateIssuer = true,
+                        ValidateAudience = true,
+                        ValidateLifetime = true,
+                        ValidateIssuerSigningKey = true,
+                        ValidIssuer = Configuration["Jwt:Issuer"],
+                        ValidAudience = Configuration["Jwt:Issuer"],
+                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["Jwt:Key"]))
+                    };
+                });
+
+
 
 
             services.AddEndpointsApiExplorer();

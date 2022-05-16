@@ -17,9 +17,10 @@ namespace IMM.MultiTenancy
         {
             TenantResolvers = new List<ITenantResolveContributor>
             {
-                
+
                 new QueryStringTenantResolveContributor(), // TODO need to understand why only CurrentUserTenantResolveContributor added . QueryStringTenantResolveContributoris added by me
-                new CurrentUserTenantResolveContributor()
+                new JwtTenantResolveContributor(),
+               // new CurrentUserTenantResolveContributor() // TODO 
             };
         }
     }
