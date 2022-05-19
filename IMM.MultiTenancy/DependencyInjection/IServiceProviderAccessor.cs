@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace IMM.MultiTenancy
+namespace IMM.MultiTenancy.DependencyInjection
 {
     public interface IServiceProviderAccessor
     {

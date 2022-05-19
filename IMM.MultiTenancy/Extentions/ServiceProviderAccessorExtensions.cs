@@ -1,4 +1,5 @@
-﻿using JetBrains.Annotations;
+﻿using IMM.MultiTenancy.DependencyInjection;
+using JetBrains.Annotations;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 
