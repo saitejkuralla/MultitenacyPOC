@@ -16,11 +16,9 @@ namespace IMM.Core.API.Controllers
     [Route("[controller]")]
     public class ProductController : ControllerBase
     {
-
         private readonly ApplicationDbContext _context;
         private readonly ICurrentTenant _currentTenant;
         private readonly ILogger<ProductController> _logger;
-
         public ProductController(ILogger<ProductController> logger,
           ICurrentTenant currentTenant, ApplicationDbContext context)
         {
@@ -44,9 +42,6 @@ namespace IMM.Core.API.Controllers
 
             return result;
         }
-
-
-
 
         #region Getproducts
         private List<ProductDTO> GetProducts()

@@ -50,42 +50,21 @@ namespace IMM.Core.API
 
                      new TenantConfiguration(new Guid("11223344-5566-7788-99AA-BBCCDDEEFF00"), "tenant1",new ConnectionStrings()
                      {
-                               { ConnectionStrings.DefaultConnectionStringName, "Server=(localdb)\\mssqllocaldb;Database=IMM_Tenant1;Trusted_Connection=True;MultipleActiveResultSets=true"},
+                            { ConnectionStrings.DefaultConnectionStringName, "Server=(localdb)\\mssqllocaldb;Database=IMM_Tenant1;Trusted_Connection=True;MultipleActiveResultSets=true"},
                             {"db1", "tenant1-db1-value"},
                             {"Admin", "tenant1-Admin-value"}
-
-
                      }),
                           new TenantConfiguration(new Guid("22223344-5566-7788-99AA-CCCCDDEEFF11"), "tenant2",new ConnectionStrings()
                      {
                           { ConnectionStrings.DefaultConnectionStringName, "Server=(localdb)\\mssqllocaldb;Database=IMM_Tenant2;Trusted_Connection=True;MultipleActiveResultSets=true"},
 
-
                      })
-       
-                        //new TenantConfiguration(new Guid("11223344-5566-7788-99AA-BBCCDDEEFF00"), "tenant1",)
-                        //{
-                        //    ConnectionStrings =
-                        //{
-                        //    { ConnectionStrings.DefaultConnectionStringName, "Server=(localdb)\\mssqllocaldb;Database=IMM_Tenant1;Trusted_Connection=True;MultipleActiveResultSets=truee"},
-                        //    {"db1", "tenant1-db1-value"},
-                        //    {"Admin", "tenant1-Admin-value"}
-                        //}
 
-                        //},
-                        //new TenantConfiguration(new Guid("22223344-5566-7788-99AA-CCCCDDEEFF11"), "tenant2")
-                        //{
-                        //                    ConnectionStrings =
-                        //{
-                        //    { ConnectionStrings.DefaultConnectionStringName, "Server=(localdb)\\mssqllocaldb;Database=IMM_Tenant2;Trusted_Connection=True;MultipleActiveResultSets=truee"},
-
-                        //}
-                        //}
                 };
             });
 
 
-            // TO DO Authentication later this will be moved to separate component
+            // TODO Authentication later this will be moved to separate component
             services.AddAuthentication(auth =>
             {
                 auth.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;

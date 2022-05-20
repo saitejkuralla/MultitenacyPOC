@@ -1,0 +1,402 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="IMM.MultiTenancy.ConfigurationStore.DefaultTenantStore" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAAAAAAAACAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ConfigurationStore\DefaultTenantStore.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="IMM.MultiTenancy.ConfigurationStore.IMMDefaultTenantStoreOptions" Collapsed="true">
+    <Position X="14.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ConfigurationStore\IMMDefaultTenantStoreOptions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IMM.MultiTenancy.Data.ConnectionStrings" Collapsed="true">
+    <Position X="16.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAAAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\ConnectionStrings.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IMM.MultiTenancy.Data.DefaultConnectionStringResolver" Collapsed="true">
+    <Position X="5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAEAAAAAAAAABgAAA=</HashCode>
+      <FileName>Data\DefaultConnectionStringResolver.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="IMM.MultiTenancy.Data.IMMDatabaseInfo" Collapsed="true">
+    <Position X="9.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAABAAA=</HashCode>
+      <FileName>Data\IMMDatabaseInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IMM.MultiTenancy.Data.IMMDatabaseInfoDictionary" Collapsed="true">
+    <Position X="11.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAQAAAABAAAAAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\IMMDatabaseInfoDictionary.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IMM.MultiTenancy.Data.IMMDbConnectionOptions" Collapsed="true">
+    <Position X="13" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\IMMDbConnectionOptions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IMM.MultiTenancy.Exceptions.BusinessException" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="13" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAAAAAAgAAAAAAAgAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>Exceptions\BusinessException.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="IMM.MultiTenancy.Exceptions.IMMException" Collapsed="true">
+    <Position X="18.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Exceptions\IMMException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IMM.MultiTenancy.Extentions.Collections.IMMCollectionExtensions" Collapsed="true">
+    <Position X="18.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Extentions\Collections\IMMCollectionExtensions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IMM.MultiTenancy.Extentions.Collections.IMMDictionaryExtensions" Collapsed="true">
+    <Position X="16.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAAAAAAAAIgAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Extentions\Collections\IMMDictionaryExtensions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IMM.MultiTenancy.Extentions.Check" Collapsed="true">
+    <Position X="14.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>Extentions\Check.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IMM.MultiTenancy.Extentions.IMMStringExtentions" Collapsed="true">
+    <Position X="9.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Extentions\IMMStringExtentions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IMM.MultiTenancy.Extentions.ServiceProviderAccessorExtensions" Collapsed="true">
+    <Position X="13" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Extentions\ServiceProviderAccessorExtensions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IMM.MultiTenancy.Security.CurrentUser" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Security\CurrentUser.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="IMM.MultiTenancy.TenantResolveContributers.HttpContextTenantResolveResultAccessor" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="14.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>TenantResolveContributers\HttpContextTenantResolveResultAccessor.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="IMM.MultiTenancy.TenantResolveContributers.HttpTenantResolveContributorBase" Collapsed="true">
+    <Position X="3.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAQAAAAgAAA=</HashCode>
+      <FileName>TenantResolveContributers\HttpTenantResolveContributorBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IMM.MultiTenancy.TenantResolveContributers.IMMAspNetCoreMultiTenancyOptions" Collapsed="true">
+    <Position X="16.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAAAAAAAAAABAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TenantResolveContributers\IMMAspNetCoreMultiTenancyOptions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IMM.MultiTenancy.TenantResolveContributers.JwtTenantResolveContributor" Collapsed="true">
+    <Position X="2" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQBAAgAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>TenantResolveContributers\JwtTenantResolveContributor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IMM.MultiTenancy.TenantResolveContributers.QueryStringTenantResolveContributor" Collapsed="true">
+    <Position X="4.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQBAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>TenantResolveContributers\QueryStringTenantResolveContributor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IMM.MultiTenancy.TenantResolveContributers.TenantResolveContributorBase" Collapsed="true">
+    <Position X="3.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>TenantResolveContributers\TenantResolveContributorBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="IMM.MultiTenancy.AsyncLocalCurrentTenantAccessor" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAAAAAAACAAAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>AsyncLocalCurrentTenantAccessor.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="IMM.MultiTenancy.BasicTenantInfo" Collapsed="true">
+    <Position X="11.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAAAAAAAAAQAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>BasicTenantInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IMM.MultiTenancy.CurrentTenant" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="18.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAABAAAQAAAAAAAQAAAAIAACAAAAAAIAAAAA=</HashCode>
+      <FileName>CurrentTenant.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="IMM.MultiTenancy.CurrentUserTenantResolveContributor" Collapsed="true">
+    <Position X="2" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQBAAAAAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>CurrentUserTenantResolveContributor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IMM.MultiTenancy.DisposeAction" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="13" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>DisposeAction.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="IMM.MultiTenancy.IMMTenantResolveOptions" Collapsed="true">
+    <Position X="11.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IMMTenantResolveOptions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IMM.MultiTenancy.MultiTenantConnectionStringResolver" Collapsed="true">
+    <Position X="5" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAAAAAABAhAgA=</HashCode>
+      <FileName>MultiTenantConnectionStringResolver.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IMM.MultiTenancy.TenantConfiguration" Collapsed="true">
+    <Position X="14.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAABAAAAAAAEAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TenantConfiguration.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IMM.MultiTenancy.TenantConfigurationProvider" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="16.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAUAAAAAAAAAAAAAAAAgAAAAQAAAAAIAAAAAA=</HashCode>
+      <FileName>TenantConfigurationProvider.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="IMM.MultiTenancy.TenantResolveContext" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="18.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAACAAAAAAAAAEAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>TenantResolveContext.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="IMM.MultiTenancy.TenantResolveContextExtensions" Collapsed="true">
+    <Position X="9.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TenantResolveContextExtensions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IMM.MultiTenancy.TenantResolveContributorBase" Collapsed="true">
+    <Position X="2" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>TenantResolveContributorBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="IMM.MultiTenancy.TenantResolver" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAAAAAAIAAAAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>TenantResolver.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="IMM.MultiTenancy.TenantResolverConsts" Collapsed="true">
+    <Position X="13" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>TenantResolverConsts.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IMM.MultiTenancy.TenantResolveResult" Collapsed="true">
+    <Position X="14.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TenantResolveResult.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="IMM.MultiTenancy.Data.IConnectionStringResolver" Collapsed="true">
+    <Position X="11.25" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>Data\IConnectionStringResolver.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="IMM.MultiTenancy.DependencyInjection.IScopedDependency" Collapsed="true">
+    <Position X="14.75" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DependencyInjection\IScopedDependency.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="IMM.MultiTenancy.DependencyInjection.IServiceProviderAccessor" Collapsed="true">
+    <Position X="7" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>DependencyInjection\IServiceProviderAccessor.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="IMM.MultiTenancy.DependencyInjection.ISingletonDependency" Collapsed="true">
+    <Position X="16.5" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DependencyInjection\ISingletonDependency.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="IMM.MultiTenancy.DependencyInjection.ITransientDependency" Collapsed="true">
+    <Position X="16.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DependencyInjection\ITransientDependency.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="IMM.MultiTenancy.Exceptions.IHasErrorCode" Collapsed="true">
+    <Position X="18.25" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Exceptions\BusinessException.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="IMM.MultiTenancy.Exceptions.IHasErrorDetails" Collapsed="true">
+    <Position X="9.5" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Exceptions\BusinessException.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="IMM.MultiTenancy.Exceptions.IHasLogLevel" Collapsed="true">
+    <Position X="11.25" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>Exceptions\BusinessException.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="IMM.MultiTenancy.Exceptions.IBusinessException" Collapsed="true">
+    <Position X="9.5" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Exceptions\BusinessException.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="IMM.MultiTenancy.Security.ICurrentUser" Collapsed="true">
+    <Position X="16.5" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Security\ICurrentUser.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="IMM.MultiTenancy.ICurrentTenant" Collapsed="true">
+    <Position X="13" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAABAAAQAAAAAAAQAAAAAAAAAAAAAAIAAAAA=</HashCode>
+      <FileName>ICurrentTenant.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="IMM.MultiTenancy.ICurrentTenantAccessor" Collapsed="true">
+    <Position X="14.75" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ICurrentTenantAccessor.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="IMM.MultiTenancy.IMultiTenant" Collapsed="true">
+    <Position X="13" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>IMultiTenant.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="IMM.MultiTenancy.ITenantConfigurationProvider" Collapsed="true">
+    <Position X="18.25" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>ITenantConfigurationProvider.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="IMM.MultiTenancy.ITenantResolveContext" Collapsed="true">
+    <Position X="7" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ITenantResolveContext.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="IMM.MultiTenancy.ITenantResolveContributor" Collapsed="true">
+    <Position X="9.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>ITenantResolveContributor.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="IMM.MultiTenancy.ITenantResolver" Collapsed="true">
+    <Position X="11.25" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ITenantResolver.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="IMM.MultiTenancy.ITenantResolveResultAccessor" Collapsed="true">
+    <Position X="13" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ITenantResolveResultAccessor.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="IMM.MultiTenancy.ITenantStore" Collapsed="true">
+    <Position X="14.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAACAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ITenantStore.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
