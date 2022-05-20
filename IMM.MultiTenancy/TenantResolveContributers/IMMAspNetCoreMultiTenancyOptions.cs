@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace IMM.MultiTenancy.TenantResolveContributers
 {
-    public class AbpAspNetCoreMultiTenancyOptions
+    public class IMMAspNetCoreMultiTenancyOptions
     {
         /// <summary>
         /// Default: <see cref="TenantResolverConsts.DefaultTenantKey"/>.
@@ -19,7 +19,7 @@ namespace IMM.MultiTenancy.TenantResolveContributers
 
         public Func<HttpContext, Exception, Task> MultiTenancyMiddlewareErrorPageBuilder { get; set; }
 
-        public AbpAspNetCoreMultiTenancyOptions()
+        public IMMAspNetCoreMultiTenancyOptions()
         {
             TenantKey = TenantResolverConsts.DefaultTenantKey;
             MultiTenancyMiddlewareErrorPageBuilder = async (context, exception) =>

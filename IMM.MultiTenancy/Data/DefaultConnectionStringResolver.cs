@@ -11,10 +11,10 @@ namespace IMM.MultiTenancy.Data
 {
     public class DefaultConnectionStringResolver : IConnectionStringResolver, ITransientDependency
     {
-        protected AbpDbConnectionOptions Options { get; }
+        protected IMMDbConnectionOptions Options { get; }
 
         public DefaultConnectionStringResolver(
-            IOptionsMonitor<AbpDbConnectionOptions> options)
+            IOptionsMonitor<IMMDbConnectionOptions> options)
         {
             Options = options.CurrentValue;
         }

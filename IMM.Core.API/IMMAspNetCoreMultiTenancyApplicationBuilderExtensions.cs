@@ -1,6 +1,6 @@
 ﻿namespace IMM.Core.API
 {
-    public static class AbpAspNetCoreMultiTenancyApplicationBuilderExtensions
+    public static class AspNetCoreMultiTenancyApplicationBuilderExtensions
     {
         public static IApplicationBuilder UseMultiTenancy(this IApplicationBuilder app)
         {

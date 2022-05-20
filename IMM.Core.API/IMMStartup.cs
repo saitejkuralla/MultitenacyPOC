@@ -2,6 +2,7 @@
 using IMM.Core.API.Repository;
 using IMM.MultiTenancy;
 using IMM.MultiTenancy.ConfigurationStore;
+using IMM.MultiTenancy.Data;
 using IMM.MultiTenancy.Security;
 using IMM.MultiTenancy.TenantResolveContributers;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -38,13 +39,21 @@ namespace IMM.Core.API
             services.AddTransient<ITokenService, TokenService>();
 
             //TODO : load from DB or JSONFILE
-            services.Configure<AbpDefaultTenantStoreOptions>(options =>
+            services.Configure<IMMDefaultTenantStoreOptions>(options =>
             {
                 options.Tenants = new[]
                 {
-                        new TenantConfiguration(new Guid("11223344-5566-7788-99AA-BBCCDDEEFF00"), "tenant1"),
-                        new TenantConfiguration(new Guid("22223344-5566-7788-99AA-CCCCDDEEFF11"), "tenant2")
+                        new TenantConfiguration(new Guid("11223344-5566-7788-99AA-BBCCDDEEFF00"), "tenant1")
+                        {
+                            ConnectionStrings =
+                        {
+                            { ConnectionStrings.DefaultConnectionStringName, "tenant1-default-value"},
+                            {"db1", "tenant1-db1-value"},
+                            {"Admin", "tenant1-Admin-value"}
+                        }
 
+                        },
+                        new TenantConfiguration(new Guid("22223344-5566-7788-99AA-CCCCDDEEFF11"), "tenant2")
                 };
             });
 

@@ -6,9 +6,9 @@ namespace IMM.MultiTenancy
 {
     public static class TenantResolveContextExtensions
     {
-        public static AbpAspNetCoreMultiTenancyOptions GetAbpAspNetCoreMultiTenancyOptions(this ITenantResolveContext context)
+        public static IMMAspNetCoreMultiTenancyOptions GetAbpAspNetCoreMultiTenancyOptions(this ITenantResolveContext context)
         {
-            return context.ServiceProvider.GetRequiredService<IOptions<AbpAspNetCoreMultiTenancyOptions>>().Value;
+            return context.ServiceProvider.GetRequiredService<IOptions<IMMAspNetCoreMultiTenancyOptions>>().Value;
         }
     }
 

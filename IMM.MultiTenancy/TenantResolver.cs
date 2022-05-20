@@ -12,9 +12,9 @@ namespace IMM.MultiTenancy
     public class TenantResolver : ITenantResolver, ITransientDependency
     {
         private readonly IServiceProvider _serviceProvider;
-        private readonly AbpTenantResolveOptions _options;
+        private readonly IMMTenantResolveOptions _options;
 
-        public TenantResolver(IOptions<AbpTenantResolveOptions> options, IServiceProvider serviceProvider)
+        public TenantResolver(IOptions<IMMTenantResolveOptions> options, IServiceProvider serviceProvider)
         {
             _serviceProvider = serviceProvider;
             _options = options.Value;

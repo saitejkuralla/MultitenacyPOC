@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace IMM.MultiTenancy.Data
 {
-    public class AbpDatabaseInfo
+    public class IMMDatabaseInfo
     {
         public string DatabaseName { get; }
 
@@ -23,7 +23,7 @@ namespace IMM.MultiTenancy.Data
         /// </summary>
         public bool IsUsedByTenants { get; set; } = true;
 
-        internal AbpDatabaseInfo(string databaseName)
+        internal IMMDatabaseInfo(string databaseName)
         {
             DatabaseName = databaseName;
             MappedConnections = new HashSet<string>();

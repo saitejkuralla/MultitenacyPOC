@@ -42,7 +42,7 @@ namespace IMM.MultiTenancy
                 if (tenant == null)
                 {
                     throw new BusinessException(
-                        code: "Volo.AbpIo.MultiTenancy:010001",
+                        code: "IMM.MultiTenancy:010001",
                         message: "Tenant not found!",
                         details: "There is no tenant with the tenant id or name: " + resolveResult.TenantIdOrName
                     );
@@ -51,7 +51,7 @@ namespace IMM.MultiTenancy
                 if (!tenant.IsActive)
                 {
                     throw new BusinessException(
-                        code: "Volo.AbpIo.MultiTenancy:010002",
+                        code: "IMM.MultiTenancy:010002",
                         message: "Tenant not active!",
                         details: "The tenant is no active with the tenant id or name: " + resolveResult.TenantIdOrName
                     );

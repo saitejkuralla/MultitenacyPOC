@@ -8,12 +8,12 @@ using System.Threading.Tasks;
 
 namespace IMM.MultiTenancy
 {
-    public class AbpTenantResolveOptions
+    public class IMMTenantResolveOptions
     {
         [NotNull]  //TODO check why do we need to use not null
         public List<ITenantResolveContributor> TenantResolvers { get; }
 
-        public AbpTenantResolveOptions()
+        public IMMTenantResolveOptions()
         {
             TenantResolvers = new List<ITenantResolveContributor>
             {

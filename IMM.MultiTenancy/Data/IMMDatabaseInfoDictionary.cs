@@ -9,26 +9,26 @@ using System.Threading.Tasks;
 
 namespace IMM.MultiTenancy.Data
 {
-    public class AbpDatabaseInfoDictionary : Dictionary<string, AbpDatabaseInfo>
+    public class IMMDatabaseInfoDictionary : Dictionary<string, IMMDatabaseInfo>
     {
-        private Dictionary<string, AbpDatabaseInfo> ConnectionIndex { get; set; }
+        private Dictionary<string, IMMDatabaseInfo> ConnectionIndex { get; set; }
 
-        public AbpDatabaseInfoDictionary()
+        public IMMDatabaseInfoDictionary()
         {
-            ConnectionIndex = new Dictionary<string, AbpDatabaseInfo>();
+            ConnectionIndex = new Dictionary<string, IMMDatabaseInfo>();
         }
 
         [CanBeNull]
-        public AbpDatabaseInfo GetMappedDatabaseOrNull(string connectionStringName)
+        public IMMDatabaseInfo GetMappedDatabaseOrNull(string connectionStringName)
         {
             return ConnectionIndex.GetOrDefault(connectionStringName);
         }
 
-        public AbpDatabaseInfoDictionary Configure(string databaseName, Action<AbpDatabaseInfo> configureAction)
+        public IMMDatabaseInfoDictionary Configure(string databaseName, Action<IMMDatabaseInfo> configureAction)
         {
             var databaseInfo = this.GetOrAdd(
                 databaseName,
-                () => new AbpDatabaseInfo(databaseName)
+                () => new IMMDatabaseInfo(databaseName)
             );
 
             configureAction(databaseInfo);
@@ -42,7 +42,7 @@ namespace IMM.MultiTenancy.Data
         /// </summary>
         public void RefreshIndexes()
         {
-            ConnectionIndex = new Dictionary<string, AbpDatabaseInfo>();
+            ConnectionIndex = new Dictionary<string, IMMDatabaseInfo>();
 
             foreach (var databaseInfo in Values)
             {

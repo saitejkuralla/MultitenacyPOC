@@ -18,7 +18,7 @@ namespace IMM.MultiTenancy
         private readonly IServiceProvider _serviceProvider;
 
         public MultiTenantConnectionStringResolver(
-            IOptionsMonitor<AbpDbConnectionOptions> options,
+            IOptionsMonitor<IMMDbConnectionOptions> options,
             ICurrentTenant currentTenant,
             IServiceProvider serviceProvider)
             : base(options)

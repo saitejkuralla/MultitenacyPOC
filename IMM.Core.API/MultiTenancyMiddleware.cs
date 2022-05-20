@@ -9,13 +9,13 @@ namespace IMM.Core.API
     {
         private readonly ITenantConfigurationProvider _tenantConfigurationProvider;
         private readonly ICurrentTenant _currentTenant;
-        private readonly AbpAspNetCoreMultiTenancyOptions _options;
+        private readonly IMMAspNetCoreMultiTenancyOptions _options;
         private readonly ITenantResolveResultAccessor _tenantResolveResultAccessor;
 
         public MultiTenancyMiddleware(
             ITenantConfigurationProvider tenantConfigurationProvider,
             ICurrentTenant currentTenant,
-            IOptions<AbpAspNetCoreMultiTenancyOptions> options,
+            IOptions<IMMAspNetCoreMultiTenancyOptions> options,
             ITenantResolveResultAccessor tenantResolveResultAccessor)
         {
             _tenantConfigurationProvider = tenantConfigurationProvider;

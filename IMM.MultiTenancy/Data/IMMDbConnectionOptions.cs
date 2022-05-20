@@ -8,16 +8,16 @@ using System.Threading.Tasks;
 
 namespace IMM.MultiTenancy.Data
 {
-    public class AbpDbConnectionOptions
+    public class IMMDbConnectionOptions
     {
         public ConnectionStrings ConnectionStrings { get; set; }
 
-        public AbpDatabaseInfoDictionary Databases { get; set; }
+        public IMMDatabaseInfoDictionary Databases { get; set; }
 
-        public AbpDbConnectionOptions()
+        public IMMDbConnectionOptions()
         {
             ConnectionStrings = new ConnectionStrings();
-            Databases = new AbpDatabaseInfoDictionary();
+            Databases = new IMMDatabaseInfoDictionary();
         }
 
         public string GetConnectionStringOrNull(

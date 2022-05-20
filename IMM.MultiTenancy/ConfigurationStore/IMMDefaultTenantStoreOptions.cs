@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace IMM.MultiTenancy.ConfigurationStore
 {
-    public class AbpDefaultTenantStoreOptions
+    public class IMMDefaultTenantStoreOptions
     {
         public TenantConfiguration[] Tenants { get; set; }
 
-        public AbpDefaultTenantStoreOptions()
+        public IMMDefaultTenantStoreOptions()
         {
             Tenants = new TenantConfiguration[0];
         }

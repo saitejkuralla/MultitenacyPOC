@@ -12,9 +12,9 @@ namespace IMM.MultiTenancy.ConfigurationStore
     //check AbpMultiTenancyModule for configuration part
     public class DefaultTenantStore : ITenantStore, ITransientDependency
     {
-        private readonly AbpDefaultTenantStoreOptions _options;
+        private readonly IMMDefaultTenantStoreOptions _options;
 
-        public DefaultTenantStore(IOptionsMonitor<AbpDefaultTenantStoreOptions> options)
+        public DefaultTenantStore(IOptionsMonitor<IMMDefaultTenantStoreOptions> options)
         {
             _options = options.CurrentValue;
         }
