@@ -1,4 +1,5 @@
-﻿using JetBrains.Annotations;
+﻿using IMM.MultiTenancy.Data;
+using JetBrains.Annotations;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,11 +22,13 @@ namespace IMM.MultiTenancy
         /// </summary>
         [CanBeNull]
         public string Name { get; }
+        public ConnectionStrings ConnectionStrings { get; }
 
-        public BasicTenantInfo(Guid? tenantId, string name = null)
+        public BasicTenantInfo(Guid? tenantId, string name = null, ConnectionStrings connectionStrings  = null)
         {
             TenantId = tenantId;
             Name = name;
+            ConnectionStrings = connectionStrings;
         }
     }
 }

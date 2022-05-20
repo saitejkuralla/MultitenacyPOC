@@ -1,4 +1,6 @@
-﻿namespace IMM.Core.API
+﻿using IMM.Core.API.DTO;
+
+namespace IMM.Core.API
 {
     public class APITenantInfo
     {
@@ -6,6 +8,6 @@
 
         public string? Name { get; set; }
 
-        public  IEnumerable<WeatherForecast>? WeatherForecast { get; set; }
+        public List<ProductDTO>? Products { get; set; }
     }
 }

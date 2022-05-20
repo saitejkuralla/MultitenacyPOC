@@ -1,16 +1,23 @@
+﻿using IMM.Core.API.DTO;
 using IMM.Core.API.JWT;
 using IMM.Core.API.JWT.Models;
 using IMM.Core.API.Repository;
+using IMM.EntityFrameworkCore.SQL;
+using IMM.EntityFrameworkCore.SQL.Data;
 using IMM.MultiTenancy;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.IdentityModel.Tokens.Jwt;
 
 namespace IMM.Core.API.Controllers
 {
+
+
+
     [ApiController]
     [Route("[controller]")]
-    public class WeatherForecastController : ControllerBase
+    public class LoginController : ControllerBase
     {
 
         private readonly IConfiguration _config;
@@ -18,45 +25,25 @@ namespace IMM.Core.API.Controllers
         private readonly ITokenService _tokenService;
         private string generatedToken = null;
 
+        private readonly ApplicationDbContext _context;
+
         private readonly ICurrentTenant _currentTenant;
 
-        private static readonly string[] Summaries = new[]
-        {
-        "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-        };
 
-        private readonly ILogger<WeatherForecastController> _logger;
 
-        public WeatherForecastController(ILogger<WeatherForecastController> logger, IConfiguration config, ITokenService tokenService, IUserRepository userRepository, ICurrentTenant currentTenant)
+        private readonly ILogger<LoginController> _logger;
+
+        public LoginController(ILogger<LoginController> logger, IConfiguration config,
+            ITokenService tokenService, IUserRepository userRepository, ICurrentTenant currentTenant, ApplicationDbContext context)
         {
             _logger = logger;
             _config = config;
             _tokenService = tokenService;
             _userRepository = userRepository;
             _currentTenant = currentTenant;
+            _context = context;
         }
 
-        [HttpGet(Name = "GetWeatherForecast")]
-        public APITenantInfo Get()
-        {
-
-            var foreCastData = Enumerable.Range(1, 5).Select(index => new WeatherForecast
-            {
-                Date = DateTime.Now.AddDays(index),
-                TemperatureC = Random.Shared.Next(-20, 55),
-                Summary = Summaries[Random.Shared.Next(Summaries.Length)]
-            })
-            .ToArray();
-
-            var result = new APITenantInfo()
-            {
-                Id = _currentTenant.Id.Value,
-                Name = _currentTenant.Name,
-                WeatherForecast = foreCastData
-            };
-
-            return result;
-        }
 
 
         [AllowAnonymous]

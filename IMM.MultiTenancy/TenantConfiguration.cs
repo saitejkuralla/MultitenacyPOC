@@ -24,7 +24,7 @@ namespace IMM.MultiTenancy
             IsActive = true;
         }
 
-        public TenantConfiguration(Guid id, [NotNull] string name)
+        public TenantConfiguration(Guid id, [NotNull] string name,[NotNull] ConnectionStrings connectionStrings)
             : this()
         {
             Check.NotNull(name, nameof(name));
@@ -32,7 +32,7 @@ namespace IMM.MultiTenancy
             Id = id;
             Name = name;
 
-            ConnectionStrings = new ConnectionStrings();
+            ConnectionStrings = connectionStrings;
         }
     }
 }

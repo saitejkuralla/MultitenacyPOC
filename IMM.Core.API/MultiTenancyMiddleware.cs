@@ -39,7 +39,7 @@ namespace IMM.Core.API
 
             if (tenant?.Id != _currentTenant.Id)
             {
-                using (_currentTenant.Change(tenant?.Id, tenant?.Name))
+                using (_currentTenant.Change(tenant?.Id, tenant?.Name, tenant?.ConnectionStrings))
                 {
                     await next(context);
                 }

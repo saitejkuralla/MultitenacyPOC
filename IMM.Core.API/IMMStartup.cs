@@ -1,5 +1,6 @@
 ﻿using IMM.Core.API.JWT;
 using IMM.Core.API.Repository;
+using IMM.EntityFrameworkCore.SQL;
 using IMM.MultiTenancy;
 using IMM.MultiTenancy.ConfigurationStore;
 using IMM.MultiTenancy.Data;
@@ -7,6 +8,7 @@ using IMM.MultiTenancy.Security;
 using IMM.MultiTenancy.TenantResolveContributers;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
+
 using System.Text;
 
 namespace IMM.Core.API
@@ -34,6 +36,8 @@ namespace IMM.Core.API
 
             services.AddTransient<MultiTenancyMiddleware>();
 
+            services.AddDbContext<ApplicationDbContext>(options => { });
+
             //JWT TEMP
             services.AddTransient<IUserRepository, UserRepository>();
             services.AddTransient<ITokenService, TokenService>();
@@ -43,17 +47,40 @@ namespace IMM.Core.API
             {
                 options.Tenants = new[]
                 {
-                        new TenantConfiguration(new Guid("11223344-5566-7788-99AA-BBCCDDEEFF00"), "tenant1")
-                        {
-                            ConnectionStrings =
-                        {
-                            { ConnectionStrings.DefaultConnectionStringName, "tenant1-default-value"},
+
+                     new TenantConfiguration(new Guid("11223344-5566-7788-99AA-BBCCDDEEFF00"), "tenant1",new ConnectionStrings()
+                     {
+                               { ConnectionStrings.DefaultConnectionStringName, "Server=(localdb)\\mssqllocaldb;Database=IMM_Tenant1;Trusted_Connection=True;MultipleActiveResultSets=true"},
                             {"db1", "tenant1-db1-value"},
                             {"Admin", "tenant1-Admin-value"}
-                        }
 
-                        },
-                        new TenantConfiguration(new Guid("22223344-5566-7788-99AA-CCCCDDEEFF11"), "tenant2")
+
+                     }),
+                          new TenantConfiguration(new Guid("22223344-5566-7788-99AA-CCCCDDEEFF11"), "tenant2",new ConnectionStrings()
+                     {
+                          { ConnectionStrings.DefaultConnectionStringName, "Server=(localdb)\\mssqllocaldb;Database=IMM_Tenant2;Trusted_Connection=True;MultipleActiveResultSets=true"},
+
+
+                     })
+       
+                        //new TenantConfiguration(new Guid("11223344-5566-7788-99AA-BBCCDDEEFF00"), "tenant1",)
+                        //{
+                        //    ConnectionStrings =
+                        //{
+                        //    { ConnectionStrings.DefaultConnectionStringName, "Server=(localdb)\\mssqllocaldb;Database=IMM_Tenant1;Trusted_Connection=True;MultipleActiveResultSets=truee"},
+                        //    {"db1", "tenant1-db1-value"},
+                        //    {"Admin", "tenant1-Admin-value"}
+                        //}
+
+                        //},
+                        //new TenantConfiguration(new Guid("22223344-5566-7788-99AA-CCCCDDEEFF11"), "tenant2")
+                        //{
+                        //                    ConnectionStrings =
+                        //{
+                        //    { ConnectionStrings.DefaultConnectionStringName, "Server=(localdb)\\mssqllocaldb;Database=IMM_Tenant2;Trusted_Connection=True;MultipleActiveResultSets=truee"},
+
+                        //}
+                        //}
                 };
             });
 

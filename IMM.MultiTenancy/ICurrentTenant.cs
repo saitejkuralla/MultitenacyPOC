@@ -1,4 +1,5 @@
-﻿using JetBrains.Annotations;
+﻿using IMM.MultiTenancy.Data;
+using JetBrains.Annotations;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,7 +17,9 @@ namespace IMM.MultiTenancy
 
         [CanBeNull]
         string Name { get; }
+        [CanBeNull]
+        ConnectionStrings connectionStrings { get; }
 
-        IDisposable Change(Guid? id, string name = null);
+        IDisposable Change(Guid? id, string name = null, ConnectionStrings connectionStrings=null);
     }
 }

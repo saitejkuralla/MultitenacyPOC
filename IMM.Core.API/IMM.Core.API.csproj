@@ -12,6 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\IMM.EntityFrameworkCore.SQL\IMM.EntityFrameworkCore.SQL.csproj" />
     <ProjectReference Include="..\IMM.MultiTenancy\IMM.MultiTenancy.csproj" />
   </ItemGroup>
 
